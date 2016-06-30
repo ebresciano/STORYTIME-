@@ -3,26 +3,62 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--STORYTIME!-->
         <scene sceneID="Q8w-Wu-gFE">
             <objects>
                 <tableViewController id="ZxT-UW-ZIW" customClass="StoryListTableViewController" customModule="Storytime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JYc-Vo-zIs">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" id="JYc-Vo-zIs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="storyCell" id="Pa2-xV-l0r">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="storyTableViewCell" rowHeight="78" id="Pa2-xV-l0r">
+                                <rect key="frame" x="0.0" y="92" width="320" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pa2-xV-l0r" id="Mjs-8C-bJF">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="77.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-QE-FH8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-Zc-tPy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="2"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SpV-Jy-IhP">
+                                                    <rect key="frame" x="0.0" y="2" width="320" height="76"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <mutableString key="text">Once upon a time there was a vegetarian dragon named Pablo. Pablo the dragon was the dark blue color of something that is dark and blue. Perhaps a dark blue blue berry. Pablo's friends were a carrot named MArty. MArty the carrot did not speak. But he was an excellent friend all the same. Pablo the dragon also had a red friend. This red friend was a ladybug. This red ladybug friend had no name so Pablo just called him "you." Come to think of it pablo wasn't even sure that "you" was a male. but he figured it would be less offensive for a female ladybug to be mistaken as a male than for a male ladybug to be mistaken as a female. One day Pablo the dragon MArty the silent carrot and "You" the possibly male red ladybug went on a journey to the yellow star in the sky. Pablo and "you" could both fly, so the journey was quite easy for them, but MArty the silent carrot did not posses the skills to defy gravity. this was a serious issue for MArty. MArty felt really lousey for holding the group back. He held still and was silent. Pablo knew something must be wrong. MArty felt stupid for being so obvious and emotional. He should really learn to hide his feeling better. Luckily Pablo was the best vegetarian dragon in the whole world and universe and he picked MArty up gently with his left hand. claw. paw. extremity. and carried him during the flight to the yellow star in the sky. MArty the silent flightless carrot and "you" the red possibly male ladybug did not know yet, but the reason for their journey was this: Pablo, the vegetarian dragon, no longer wanted to be the dark blue color which he currently was. currently was. currently was. that makes no sense. OH WELL. Pablo didn't want to be blue! he desperately wanted to be yellow. Hence the journey to the yellow star in the sky. After a good 12 and a half minutes of flight they arrived. Pablo looked at the star. "you" the red possibly male ladybug looked at Pablo. "NO PABLO NO!" yelled the Star. to be continued.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qjG-Zc-tPy" firstAttribute="leading" secondItem="V1L-QE-FH8" secondAttribute="leading" id="OcS-wD-fbL"/>
+                                                <constraint firstItem="qjG-Zc-tPy" firstAttribute="centerX" secondItem="SpV-Jy-IhP" secondAttribute="centerX" id="YS5-nd-5nE"/>
+                                                <constraint firstItem="qjG-Zc-tPy" firstAttribute="top" secondItem="V1L-QE-FH8" secondAttribute="top" id="rC3-PU-VqK"/>
+                                                <constraint firstItem="SpV-Jy-IhP" firstAttribute="leading" secondItem="V1L-QE-FH8" secondAttribute="leading" id="rMK-zu-ojD"/>
+                                                <constraint firstAttribute="trailing" secondItem="SpV-Jy-IhP" secondAttribute="trailing" id="sat-RN-HXO"/>
+                                                <constraint firstAttribute="trailing" secondItem="qjG-Zc-tPy" secondAttribute="trailing" id="uGH-RT-ctR"/>
+                                                <constraint firstAttribute="bottom" secondItem="SpV-Jy-IhP" secondAttribute="bottom" id="wqa-Em-KPm"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="V1L-QE-FH8" secondAttribute="trailing" id="WXe-W2-YXD"/>
+                                        <constraint firstItem="V1L-QE-FH8" firstAttribute="top" secondItem="Mjs-8C-bJF" secondAttribute="top" id="dfr-Yq-smN"/>
+                                        <constraint firstAttribute="bottom" secondItem="V1L-QE-FH8" secondAttribute="bottom" id="mRZ-Hc-iS0"/>
+                                        <constraint firstItem="V1L-QE-FH8" firstAttribute="leading" secondItem="Mjs-8C-bJF" secondAttribute="leading" id="ndV-HV-mwP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="On0-eM-FbU" kind="show" identifier="toStoryDetail" trigger="accessoryAction" id="csC-Lj-grR"/>
+                                    <segue destination="CZh-Dw-12n" kind="show" identifier="toStoryDetail" trigger="accessoryAction" id="csC-Lj-grR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="350" y="406"/>
         </scene>
-        <!--Story Detail View Controller-->
+        <!--STORYTIME!-->
         <scene sceneID="3rB-ia-pPj">
             <objects>
                 <viewController id="On0-eM-FbU" customClass="StoryDetailViewController" customModule="Storytime" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,29 +95,101 @@
                     <view key="view" contentMode="scaleToFill" id="vNM-Us-Dlu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWB-sS-79Y">
+                                <rect key="frame" x="120" y="89" width="81" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="myv-u1-97x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zV2-GU-oe6">
+                                <rect key="frame" x="20" y="118" width="280" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="852" id="tOK-y0-aw1"/>
+                                </constraints>
+                                <mutableString key="text">Once upon a time there was a vegetarian dragon named Pablo. Pablo the dragon was the dark blue color of something that is dark and blue. Perhaps a dark blue blue berry. Pablo's friends were a carrot named MArty. MArty the carrot did not speak. But he was an excellent friend all the same. Pablo the dragon also had a red friend. This red friend was a ladybug. This red ladybug friend had no name so Pablo just called him "you." Come to think of it pablo wasn't even sure that "you" was a male. but he figured it would be less offensive for a female ladybug to be mistaken as a male than for a male ladybug to be mistaken as a female. One day Pablo the dragon MArty the silent carrot and "You" the possibly male red ladybug went on a journey to the yellow star in the sky. Pablo and "you" could both fly, so the journey was quite easy for them, but MArty the silent carrot did not posses the skills to defy gravity. this was a serious issue for MArty. MArty felt really lousey for holding the group back. He held still and was silent. Pablo knew something must be wrong. MArty felt stupid for being so obvious and emotional. He should really learn to hide his feeling better. Luckily Pablo was the best vegetarian dragon in the whole world and universe and he picked MArty up gently with his left hand. claw. paw. extremity. and carried him during the flight to the yellow star in the sky. MArty the silent flightless carrot and "you" the red possibly male ladybug did not know yet, but the reason for their journey was this: Pablo, the vegetarian dragon, no longer wanted to be the dark blue color which he currently was. currently was. currently was. that makes no sense. OH WELL. Pablo didn't want to be blue! he desperately wanted to be yellow. Hence the journey to the yellow star in the sky. After a good 12 and a half minutes of flight they arrived. Pablo looked at the star. "you" the red possibly male ladybug looked at Pablo. "NO PABLO NO!" yelled the Star. to be continued.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DWB-sS-79Y" firstAttribute="centerX" secondItem="vNM-Us-Dlu" secondAttribute="centerX" id="1F4-F5-Gve"/>
+                            <constraint firstItem="DWB-sS-79Y" firstAttribute="centerX" secondItem="zV2-GU-oe6" secondAttribute="centerX" id="45I-3I-rXt"/>
+                            <constraint firstItem="DWB-sS-79Y" firstAttribute="top" secondItem="z60-r6-t6j" secondAttribute="bottom" constant="25" id="7Hl-EW-J4s"/>
+                            <constraint firstItem="zV2-GU-oe6" firstAttribute="leading" secondItem="vNM-Us-Dlu" secondAttribute="leadingMargin" constant="4" id="9Ft-BD-jhi"/>
+                            <constraint firstItem="zV2-GU-oe6" firstAttribute="top" secondItem="DWB-sS-79Y" secondAttribute="bottom" constant="8" symbolic="YES" id="evM-yV-IcG"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="STORYTIME!" id="9Es-1D-D2x"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DaQ-jx-whN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="981"/>
+            <point key="canvasLocation" x="906" y="981"/>
+        </scene>
+        <!--Search Results Table View Controller-->
+        <scene sceneID="xWi-XL-AcE">
+            <objects>
+                <tableViewController storyboardIdentifier="SearchResultsTableViewController" id="Byb-Lb-CFX" customClass="SearchResultsTableViewController" customModule="Storytime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dZT-Uu-fPh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultsCell" id="IAC-Sz-yso">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IAC-Sz-yso" id="atv-Ls-ofI">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Byb-Lb-CFX" id="lvU-dx-doJ"/>
+                            <outlet property="delegate" destination="Byb-Lb-CFX" id="lDx-at-x0o"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cx-eb-vlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247" y="-125"/>
         </scene>
         <!--ADD AUTHORS!-->
         <scene sceneID="i10-gv-J8s">
             <objects>
                 <tableViewController id="fxu-uM-DdN" customClass="SearchResultsTableViewController" customModule="Storytime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pBc-qY-ujH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="pBc-qY-ujH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultsCell" id="5yF-2c-MSY">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="55" id="5yF-2c-MSY">
+                                <rect key="frame" x="0.0" y="92" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5yF-2c-MSY" id="G1N-u4-VRU">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQ6-2F-iLD">
+                                            <rect key="frame" x="271" y="4" width="41" height="47"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="41" id="GQJ-LR-cWG"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="plus"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="VQ6-2F-iLD" firstAttribute="trailing" secondItem="G1N-u4-VRU" secondAttribute="trailingMargin" id="P3v-Md-xjq"/>
+                                        <constraint firstItem="VQ6-2F-iLD" firstAttribute="centerY" secondItem="G1N-u4-VRU" secondAttribute="centerY" id="X8S-vZ-Dv6"/>
+                                        <constraint firstItem="VQ6-2F-iLD" firstAttribute="top" secondItem="G1N-u4-VRU" secondAttribute="topMargin" constant="-4" id="rdJ-S2-jcS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -91,11 +199,14 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="ADD AUTHORS!" id="7nz-va-Poh">
-                        <barButtonItem key="rightBarButtonItem" title="START" id="LQr-eQ-ChK">
+                    <navigationItem key="navigationItem" title="ADD AUTHORS!" id="UGl-B4-VUG">
+                        <barButtonItem key="leftBarButtonItem" id="yDf-Sw-gbc">
+                            <color key="tintColor" red="0.1058823529" green="0.83137254900000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="START" id="wQk-rk-0Ig">
                             <color key="tintColor" red="0.1058823529" green="0.83137254900000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="EHd-0A-EYK" kind="show" identifier="toNewStory" id="QpJ-sl-Bu2"/>
+                                <segue destination="cEF-Kg-v7o" kind="show" identifier="toNewStory" id="aah-w1-Lhd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -103,9 +214,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69J-zq-fPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1259" y="406"/>
+            <point key="canvasLocation" x="1247" y="406"/>
         </scene>
-        <!--New Story View Controller-->
+        <!--NEW STORY!-->
         <scene sceneID="oPh-29-3st">
             <objects>
                 <viewController id="EHd-0A-EYK" customClass="NewStoryViewController" customModule="Storytime" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,13 +227,33 @@
                     <view key="view" contentMode="scaleToFill" id="rsZ-JY-eWJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C2E-jo-6Rd">
+                                <rect key="frame" x="8" y="72" width="304" height="785"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Once upon a time there was a vegetarian dragon named Pablo. Pablo the dragon was the dark blue color of something that is dark and blue. Perhaps a dark blue blue berry. Pablo's friends were a carrot named MArty. MArty the carrot did not speak. But he was an excellent friend all the same. Pablo the dragon also had a red friend. This red friend was a ladybug. This red ladybug friend had no name so Pablo just called him "you." Come to think of it pablo wasn't even sure that "you" was a male. but he figured it would be less offensive for a female ladybug to be mistaken as a male than for a male ladybug to be mistaken as a female. One day Pablo the dragon MArty the silent carrot and "You" the possibly male red ladybug went on a journey to the yellow star in the sky. Pablo and "you" could both fly, so the journey was quite easy for them, but MArty the silent carrot did not posses the skills to defy gravity. this was a serious issue for MArty. MArty felt really lousey for holding the group back. He held still and was silent. Pablo knew something must be wrong. MArty felt stupid for being so obvious and emotional. He should really learn to hide his feeling better. Luckily Pablo was the best vegetarian dragon in the whole world and universe and he picked MArty up gently with his left hand. claw. paw. extremity. and carried him during the flight to the yellow star in the sky. MArty the silent flightless carrot and "you" the red possibly male ladybug did not know yet, but the reason for their journey was this: Pablo, the vegetarian dragon, no longer wanted to be the dark blue color which he currently was. currently was. currently was. that makes no sense. OH WELL. Pablo didn't want to be blue! he desperately wanted to be yellow. Hence the journey to the yellow star in the sky. After a good 12 and a half minutes of flight they arrived. Pablo looked at the star. "you" the red possibly male ladybug looked at Pablo. "NO PABLO NO!" yelled the Star. to be continued.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C2E-jo-6Rd" secondAttribute="trailing" constant="8" id="Xgq-7K-cKY"/>
+                            <constraint firstItem="C2E-jo-6Rd" firstAttribute="leading" secondItem="rsZ-JY-eWJ" secondAttribute="leading" constant="8" id="hn3-7N-HoC"/>
+                            <constraint firstAttribute="bottom" secondItem="C2E-jo-6Rd" secondAttribute="bottom" constant="8" id="u67-dU-yOf"/>
+                            <constraint firstItem="C2E-jo-6Rd" firstAttribute="top" secondItem="5EH-jT-f2H" secondAttribute="bottom" constant="8" id="wLK-iY-Lm8"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="NEW STORY!" id="jfu-ww-xiB">
+                        <barButtonItem key="rightBarButtonItem" title="THE END" id="6pX-7b-7t5">
+                            <color key="tintColor" red="0.1058823529" green="0.83137254900000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZW-a9-U89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="406"/>
+            <point key="canvasLocation" x="2170" y="406"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZXa-sw-5Hi">
@@ -163,5 +294,46 @@
             </objects>
             <point key="canvasLocation" x="727" y="406"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0bK-mO-YuN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cEF-Kg-v7o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iZL-QD-HMB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.92549019610000005" green="0.33333333329999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EHd-0A-EYK" kind="relationship" relationship="rootViewController" id="4qY-sp-88U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgw-ts-WxD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="406"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lvQ-iy-P0L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CZh-Dw-12n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VJb-wK-7A2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.92549019610000005" green="0.33333333329999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="On0-eM-FbU" kind="relationship" relationship="rootViewController" id="Kib-3j-gLv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRT-ND-2eL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="981"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="plus" width="626" height="626"/>
+    </resources>
 </document>
