@@ -14,10 +14,6 @@
 		CC0E3C511D246BEE0034D135 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E3C501D246BEE0034D135 /* StoryTableViewCell.swift */; };
 		CC0E3C581D249C660034D135 /* SyncableObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E3C521D249C660034D135 /* SyncableObject+CoreDataProperties.swift */; };
 		CC0E3C591D249C660034D135 /* SyncableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E3C531D249C660034D135 /* SyncableObject.swift */; };
-		CC0E3C5A1D249C660034D135 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E3C541D249C660034D135 /* Post+CoreDataProperties.swift */; };
-		CC0E3C5B1D249C660034D135 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E3C551D249C660034D135 /* Post.swift */; };
-		CC0E3C5C1D249C660034D135 /* Story+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E3C561D249C660034D135 /* Story+CoreDataProperties.swift */; };
-		CC0E3C5D1D249C660034D135 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E3C571D249C660034D135 /* Story.swift */; };
 		CC0E3C5F1D24A0E40034D135 /* StoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E3C5E1D24A0E40034D135 /* StoryController.swift */; };
 		CC0E3C621D24A2750034D135 /* CloudKitManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E3C611D24A2750034D135 /* CloudKitManagedObject.swift */; };
 		CC7900021D21CA2E00670517 /* NewStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7900011D21CA2E00670517 /* NewStoryViewController.swift */; };
@@ -28,6 +24,10 @@
 		CC79FFF31D21C84000670517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC79FFF21D21C84000670517 /* Assets.xcassets */; };
 		CC79FFF61D21C84000670517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC79FFF41D21C84000670517 /* LaunchScreen.storyboard */; };
 		CC79FFFE1D21C92A00670517 /* StoryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79FFFD1D21C92A00670517 /* StoryListTableViewController.swift */; };
+		CCDA40A01D258AEC0078C8F3 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA409C1D258AEC0078C8F3 /* Post+CoreDataProperties.swift */; };
+		CCDA40A11D258AEC0078C8F3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA409D1D258AEC0078C8F3 /* Post.swift */; };
+		CCDA40A21D258AEC0078C8F3 /* Story+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA409E1D258AEC0078C8F3 /* Story+CoreDataProperties.swift */; };
+		CCDA40A31D258AEC0078C8F3 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA409F1D258AEC0078C8F3 /* Story.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +38,6 @@
 		CC0E3C501D246BEE0034D135 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryTableViewCell.swift; path = ../StoryTableViewCell.swift; sourceTree = "<group>"; };
 		CC0E3C521D249C660034D135 /* SyncableObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SyncableObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CC0E3C531D249C660034D135 /* SyncableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncableObject.swift; path = ../SyncableObject.swift; sourceTree = "<group>"; };
-		CC0E3C541D249C660034D135 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CC0E3C551D249C660034D135 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
-		CC0E3C561D249C660034D135 /* Story+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Story+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CC0E3C571D249C660034D135 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Story.swift; path = ../Story.swift; sourceTree = "<group>"; };
 		CC0E3C5E1D24A0E40034D135 /* StoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryController.swift; sourceTree = "<group>"; };
 		CC0E3C611D24A2750034D135 /* CloudKitManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudKitManagedObject.swift; path = Storytime/CloudKitManagedObject.swift; sourceTree = "<group>"; };
 		CC7900011D21CA2E00670517 /* NewStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStoryViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +50,10 @@
 		CC79FFF51D21C84000670517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC79FFF71D21C84000670517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC79FFFD1D21C92A00670517 /* StoryListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryListTableViewController.swift; sourceTree = "<group>"; };
+		CCDA409C1D258AEC0078C8F3 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CCDA409D1D258AEC0078C8F3 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
+		CCDA409E1D258AEC0078C8F3 /* Story+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Story+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CCDA409F1D258AEC0078C8F3 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Story.swift; path = ../Story.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +78,9 @@
 		CC0E3C601D24A1180034D135 /* CLOUDKIT/COREDATA */ = {
 			isa = PBXGroup;
 			children = (
+				CCDA409C1D258AEC0078C8F3 /* Post+CoreDataProperties.swift */,
+				CCDA409E1D258AEC0078C8F3 /* Story+CoreDataProperties.swift */,
 				CC0E3C521D249C660034D135 /* SyncableObject+CoreDataProperties.swift */,
-				CC0E3C541D249C660034D135 /* Post+CoreDataProperties.swift */,
-				CC0E3C561D249C660034D135 /* Story+CoreDataProperties.swift */,
 				CC0E3C441D245D3A0034D135 /* CoreDataModel.xcdatamodeld */,
 				CC0E3C611D24A2750034D135 /* CloudKitManagedObject.swift */,
 				CC0E3C4C1D2466C00034D135 /* CloudKitManager.swift */,
@@ -112,8 +112,8 @@
 		CC79000F1D21D2A000670517 /* MODEL */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E3C571D249C660034D135 /* Story.swift */,
-				CC0E3C551D249C660034D135 /* Post.swift */,
+				CCDA409D1D258AEC0078C8F3 /* Post.swift */,
+				CCDA409F1D258AEC0078C8F3 /* Story.swift */,
 				CC0E3C4A1D24666E0034D135 /* Stack.swift */,
 				CC0E3C481D24641E0034D135 /* SearchableRecord.swift */,
 				CC0E3C531D249C660034D135 /* SyncableObject.swift */,
@@ -227,22 +227,22 @@
 			files = (
 				CC79FFEC1D21C84000670517 /* AppDelegate.swift in Sources */,
 				CC0E3C591D249C660034D135 /* SyncableObject.swift in Sources */,
-				CC0E3C5D1D249C660034D135 /* Story.swift in Sources */,
 				CC7900041D21CA8100670517 /* StoryDetailViewController.swift in Sources */,
+				CCDA40A21D258AEC0078C8F3 /* Story+CoreDataProperties.swift in Sources */,
 				CC0E3C491D24641E0034D135 /* SearchableRecord.swift in Sources */,
 				CC0E3C5F1D24A0E40034D135 /* StoryController.swift in Sources */,
-				CC0E3C5B1D249C660034D135 /* Post.swift in Sources */,
 				CC7900061D21CB1B00670517 /* SearchResultsTableViewController.swift in Sources */,
 				CC0E3C4B1D24666E0034D135 /* Stack.swift in Sources */,
 				CC0E3C461D245D3A0034D135 /* CoreDataModel.xcdatamodeld in Sources */,
+				CCDA40A01D258AEC0078C8F3 /* Post+CoreDataProperties.swift in Sources */,
 				CC0E3C581D249C660034D135 /* SyncableObject+CoreDataProperties.swift in Sources */,
-				CC0E3C5A1D249C660034D135 /* Post+CoreDataProperties.swift in Sources */,
-				CC0E3C5C1D249C660034D135 /* Story+CoreDataProperties.swift in Sources */,
 				CC0E3C621D24A2750034D135 /* CloudKitManagedObject.swift in Sources */,
+				CCDA40A11D258AEC0078C8F3 /* Post.swift in Sources */,
 				CC7900021D21CA2E00670517 /* NewStoryViewController.swift in Sources */,
 				CC79FFFE1D21C92A00670517 /* StoryListTableViewController.swift in Sources */,
 				CC0E3C4D1D2466C00034D135 /* CloudKitManager.swift in Sources */,
 				CC0E3C511D246BEE0034D135 /* StoryTableViewCell.swift in Sources */,
+				CCDA40A31D258AEC0078C8F3 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

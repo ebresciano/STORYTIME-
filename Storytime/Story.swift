@@ -2,7 +2,7 @@
 //  Story.swift
 //  Storytime
 //
-//  Created by Eva Marie Bresciano on 6/29/16.
+//  Created by Eva Marie Bresciano on 6/30/16.
 //  Copyright © 2016 Eva Bresciano. All rights reserved.
 //
 
@@ -41,10 +41,10 @@ class Story: SyncableObject, CloudKitManagedObject {
         return record
     }
     
-     convenience required init?(record: CKRecord, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+    convenience required init?(record: CKRecord, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         guard let timestamp = record.creationDate,
-        title = record[Story.kTitle] as? CKReference else {
-            return nil
+            title = record[Story.kTitle] as? CKReference else {
+                return nil
         }
         
         guard let entity = NSEntityDescription.entityForName(Story.kType, inManagedObjectContext: context)
@@ -54,9 +54,9 @@ class Story: SyncableObject, CloudKitManagedObject {
         self.timestamp = timestamp
         self.recordIDData = NSKeyedArchiver.archivedDataWithRootObject(record.recordID)
         self.recordName = record.recordID.recordName
-
+        
     }
-
-
+    
+    
     
 }

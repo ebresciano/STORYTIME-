@@ -2,7 +2,7 @@
 //  Post.swift
 //  Storytime
 //
-//  Created by Eva Marie Bresciano on 6/29/16.
+//  Created by Eva Marie Bresciano on 6/30/16.
 //  Copyright © 2016 Eva Bresciano. All rights reserved.
 //
 
@@ -27,8 +27,8 @@ class Post: SyncableObject, CloudKitManagedObject {
         self.timestamp = timestamp
         self.story = story
         self.recordName = nameForManagedObject()
-
-        }
+        
+    }
     
     var recordType: String = Post.kType
     
@@ -69,7 +69,7 @@ class Post: SyncableObject, CloudKitManagedObject {
             self.story = story
         }
     }
-
-
-
+    
+    
+    
 }
