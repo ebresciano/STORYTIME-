@@ -12,7 +12,9 @@ import CoreData
 
 class StoryListTableViewController: UITableViewController {
     
-   override func viewDidLoad() {
+    var fetchedResultsController: NSFetchedResultsController?
+    
+    override func viewDidLoad() {
        
     }
 
@@ -36,21 +38,23 @@ class StoryListTableViewController: UITableViewController {
    
 
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("storyTableViewCell", forIndexPath: indexPath) as? StoryTableViewCell,
+        let story = fetchedResultsController?.objectAtIndexPath(indexPath) as? Story else {
+            return StoryTableViewCell()
+        }
+        cell.textLabel?.text = story.title
+        cell.detailTextLabel?.text = "\(story.timestamp)"
+        cell.updateWithStory(story)
         return cell
     }
-    */
-
     
-    // Override to support editing the table view.
+   // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
+            let story = StoryController.sharedController.stories[indexPath.row]
+            StoryController.sharedController.removeStory(story)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -58,15 +62,17 @@ class StoryListTableViewController: UITableViewController {
     }
     
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        if segue.identifier == "toStoryDetail" {
+            let storyDVC = segue.destinationViewController as? StoryDetailViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let story = StoryController.sharedController.stories[indexPath.row]
+                storyDVC?.story = story
+            }
+         }
+      }
 }
+    
+
+

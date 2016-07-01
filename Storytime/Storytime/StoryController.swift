@@ -13,6 +13,10 @@ import CoreData
 
 class StoryController {
     
+    static let sharedController =  StoryController()
+    
+    var stories = [Story]()
+    
     init() {
     
     self.cloudKitManager = CloudKitManager()
@@ -23,8 +27,6 @@ class StoryController {
         }
     }
     
-    static let sharedController = StoryController()
-    
     let cloudKitManager: CloudKitManager
     
     var isSyncing: Bool = false
@@ -34,6 +36,13 @@ class StoryController {
             try Stack.sharedStack.managedObjectContext.save()
         } catch {
             print("Very sorry, could not save")
+        }
+    }
+    
+    
+    func removeStory(story: Story) {
+        if let indexOfStory = stories.indexOf(story) {
+            stories.removeAtIndex(indexOfStory)
         }
     }
     

@@ -84,7 +84,7 @@ class SearchResultsTableViewController: UITableViewController, NSFetchedResultsC
         StoryController.sharedController.cloudKitManager.fetchAllDiscoverableUsers { (userInfoRecords) in
             if let userInfoArray = userInfoRecords {
                 
-                searchResultsController.userInfoArray = userInfoArray.filter({ $0 == searchTerm })
+                searchResultsController.userInfoArray = userInfoArray.filter({ $0.displayContact == searchTerm })
                 searchResultsController.tableView.reloadData()
             }
         }
