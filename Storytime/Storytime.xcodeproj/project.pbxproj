@@ -20,7 +20,6 @@
 		CC7900041D21CA8100670517 /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7900031D21CA8100670517 /* StoryDetailViewController.swift */; };
 		CC7900061D21CB1B00670517 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7900051D21CB1B00670517 /* SearchResultsTableViewController.swift */; };
 		CC79FFEC1D21C84000670517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79FFEB1D21C84000670517 /* AppDelegate.swift */; };
-		CC79FFF11D21C84000670517 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC79FFEF1D21C84000670517 /* Main.storyboard */; };
 		CC79FFF31D21C84000670517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC79FFF21D21C84000670517 /* Assets.xcassets */; };
 		CC79FFF61D21C84000670517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC79FFF41D21C84000670517 /* LaunchScreen.storyboard */; };
 		CC79FFFE1D21C92A00670517 /* StoryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC79FFFD1D21C92A00670517 /* StoryListTableViewController.swift */; };
@@ -28,6 +27,8 @@
 		CCDA40A11D258AEC0078C8F3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA409D1D258AEC0078C8F3 /* Post.swift */; };
 		CCDA40A21D258AEC0078C8F3 /* Story+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA409E1D258AEC0078C8F3 /* Story+CoreDataProperties.swift */; };
 		CCDA40A31D258AEC0078C8F3 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA409F1D258AEC0078C8F3 /* Story.swift */; };
+		CCDA40A51D25D3970078C8F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDA40A41D25D3970078C8F3 /* Main.storyboard */; };
+		CCDA40A81D25DB950078C8F3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDA40A71D25DB950078C8F3 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +46,6 @@
 		CC7900051D21CB1B00670517 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		CC79FFE81D21C84000670517 /* Storytime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC79FFEB1D21C84000670517 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC79FFF01D21C84000670517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC79FFF21D21C84000670517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC79FFF51D21C84000670517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC79FFF71D21C84000670517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +54,9 @@
 		CCDA409D1D258AEC0078C8F3 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
 		CCDA409E1D258AEC0078C8F3 /* Story+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Story+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CCDA409F1D258AEC0078C8F3 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Story.swift; path = ../Story.swift; sourceTree = "<group>"; };
+		CCDA40A41D25D3970078C8F3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Main.storyboard; sourceTree = "<group>"; };
+		CCDA40A61D25DB710078C8F3 /* Storytime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Storytime.entitlements; sourceTree = "<group>"; };
+		CCDA40A71D25DB950078C8F3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDA40A81D25DB950078C8F3 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +108,7 @@
 		CC7900081D21D13C00670517 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
-				CC79FFEF1D21C84000670517 /* Main.storyboard */,
+				CCDA40A41D25D3970078C8F3 /* Main.storyboard */,
 			);
 			name = VIEW;
 			sourceTree = "<group>";
@@ -124,6 +128,7 @@
 		CC79FFDF1D21C84000670517 = {
 			isa = PBXGroup;
 			children = (
+				CCDA40A71D25DB950078C8F3 /* CloudKit.framework */,
 				CC79FFEA1D21C84000670517 /* Storytime */,
 				CC79FFE91D21C84000670517 /* Products */,
 			);
@@ -140,6 +145,7 @@
 		CC79FFEA1D21C84000670517 /* Storytime */ = {
 			isa = PBXGroup;
 			children = (
+				CCDA40A61D25DB710078C8F3 /* Storytime.entitlements */,
 				CC79FFEB1D21C84000670517 /* AppDelegate.swift */,
 				CC0E3C601D24A1180034D135 /* CLOUDKIT/COREDATA */,
 				CC0E3C471D2463E70034D135 /* MODEL CONTROLLER */,
@@ -185,7 +191,12 @@
 				TargetAttributes = {
 					CC79FFE71D21C84000670517 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = WP96JMRW5V;
+						DevelopmentTeam = 35L3J99R6J;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -212,9 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDA40A51D25D3970078C8F3 /* Main.storyboard in Resources */,
 				CC79FFF61D21C84000670517 /* LaunchScreen.storyboard in Resources */,
 				CC79FFF31D21C84000670517 /* Assets.xcassets in Resources */,
-				CC79FFF11D21C84000670517 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,14 +260,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CC79FFEF1D21C84000670517 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC79FFF01D21C84000670517 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CC79FFF41D21C84000670517 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,6 +360,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Storytime/Storytime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Storytime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example..Storytime;
@@ -368,6 +373,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Storytime/Storytime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Storytime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example..Storytime;

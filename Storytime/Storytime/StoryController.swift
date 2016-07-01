@@ -21,8 +21,6 @@ class StoryController {
                 print("successfully subscribed to new story")
             }
         }
-
-        
     }
     
     static let sharedController = StoryController()
@@ -50,7 +48,7 @@ class StoryController {
         saveContext()
     }
     
-    func storytWithName(name: String) -> Story? {
+    func storyWithName(name: String) -> Story? {
         if name.isEmpty {
             return nil
         }

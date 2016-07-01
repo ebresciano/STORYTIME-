@@ -29,6 +29,11 @@ class Post: SyncableObject, CloudKitManagedObject {
         self.recordName = nameForManagedObject()
         
     }
+// TODO: - Sarch term
+    func matchesSearchTerm(searchTerm: String) { //-> Bool
+        //return ().filter({$0.matchesSearchTerm(searchTerm)}).count > 0
+    }
+
     
     var recordType: String = Post.kType
     
@@ -65,7 +70,7 @@ class Post: SyncableObject, CloudKitManagedObject {
         self.word = word
         self.recordIDData = NSKeyedArchiver.archivedDataWithRootObject(record.recordID)
         
-        if let story = StoryController.sharedController.StoryWithName(storyReference.recordID.recordName) {
+        if let story = StoryController.sharedController.storyWithName(storyReference.recordID.recordName) {
             self.story = story
         }
     }

@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class NewStoryViewController: UIViewController {
-
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+         
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +24,7 @@ class NewStoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+       
 
     /*
     // MARK: - Navigation

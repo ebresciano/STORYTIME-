@@ -9,6 +9,8 @@
 import UIKit
 
 class StoryTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var storyTextField: UITextField!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +22,12 @@ class StoryTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func updateWithStory(story: Story) {
+        storyTextField.text = Story.kPost
+    }
+    
+        
+    
 
 }
