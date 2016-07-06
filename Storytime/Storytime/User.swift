@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
+import CloudKit
 
-class User: Equatable {
+class User: Equatable, SearchableRecord {
+    
+    var users = [User]()
     
     private let kUsername = "username"
     private let kPassword = "password"
@@ -33,6 +38,19 @@ class User: Equatable {
         self.username = username
         self.password = password
         }
+    
+    
+    @objc func matchesSearchTerm(searchTerm: String) -> Bool {
+        
+        if let users = self.users as? [User] {
+            
+    let matchingUserTerms = users.filter({ $0.matchesSearchTerm(searchTerm) })
+            return matchingUserTerms.count > 0
+        } else {
+            return false
+        }
+    }
+
 }
 
     func == (lhs: User, rhs: User) -> Bool {

@@ -11,6 +11,7 @@ import UIKit
 
 class UserController {
     
+    var users = [User]()
     
     var currentUser: User?
     

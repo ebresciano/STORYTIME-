@@ -17,20 +17,21 @@ class SearchResultsTableViewController: UITableViewController, NSFetchedResultsC
 
     var resultsArray: [SearchableRecord] = []
     
-    var userInfoArray: [CKDiscoveredUserInfo]?
+    var users = [User]()
+    
+     override func viewDidAppear(animated: Bool) {
+        users = UserController.sharedController.users
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        users = UserController.sharedController.users
         print(resultsArray)
         setUpSearchController()
-    }
+        }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        StoryController.sharedController.cloudKitManager.fetchAllDiscoverableUsers { (userInfoRecords) in
-            self.userInfoArray = userInfoRecords
-        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,15 +80,14 @@ class SearchResultsTableViewController: UITableViewController, NSFetchedResultsC
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        guard let searchResultsController = searchController.searchResultsController as? SearchResultsTableViewController,
-            let searchTerm = searchController.searchBar.text?.lowercaseString else { return }
-        StoryController.sharedController.cloudKitManager.fetchAllDiscoverableUsers { (userInfoRecords) in
-            if let userInfoArray = userInfoRecords {
-                
-                searchResultsController.userInfoArray = userInfoArray.filter({ $0.displayContact == searchTerm })
+        if let searchResultsController = searchController.searchResultsController as? SearchResultsTableViewController,
+            let searchTerm = searchController.searchBar.text?.lowercaseString,
+            let users = users {
+        
+                searchResultsController.resultsArray = users.filter({$0.matchesSearchTerm(searchTerm)})
                 searchResultsController.tableView.reloadData()
             }
         }
-    }
     
+
 }

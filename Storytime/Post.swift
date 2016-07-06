@@ -29,9 +29,9 @@ class Post: SyncableObject, CloudKitManagedObject {
         self.recordName = nameForManagedObject()
         
     }
-// TODO: - Sarch term
-    func matchesSearchTerm(searchTerm: String) { //-> Bool
-        //return ().filter({$0.matchesSearchTerm(searchTerm)}).count > 0
+
+    func matchesSearchTerm(searchTerm: String) {
+        return (user).filter({$0.matchesSearchTerm(searchTerm)}).count > 0
     }
 
     
