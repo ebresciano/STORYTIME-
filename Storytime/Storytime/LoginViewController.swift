@@ -40,9 +40,7 @@ class LoginViewController: UIViewController {
         checkForAccount()
     }
     
-       
-       
-    func updateLoginView() {
+       func updateLoginView() {
         if account == .existing  {
             account = .new
             usernameTextField.hidden = false
@@ -62,18 +60,21 @@ class LoginViewController: UIViewController {
         if account == .existing {
             if let username = usernameTextField.text where username.characters.count > 0, let password = passwordTextField.text where password.characters.count > 0 {
                 if let user = UserController.sharedController.currentUser {
-                        self.dismissViewControllerAnimated(true, completion: nil)
+                 print(user)
                 }
             }
         } else {
             if account == .new {
                 if let username = usernameTextField.text where username.characters.count > 0, let password = passwordTextField.text where password.characters.count > 0 {
-                    if let user = UserController.sharedController.newUser {
-                     self.dismissViewControllerAnimated(true, completion: nil)
-                        }
-                    }
+                    UserController.sharedController.createUser(username, password: password)
+                    StoryController.sharedController.saveContext()
+                                        }
                 }
             }
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let navController = storyBoard.instantiateViewControllerWithIdentifier("navController")
+        self.presentViewController(navController, animated: true, completion: nil)
+
         }
     }
 

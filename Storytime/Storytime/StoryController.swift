@@ -16,7 +16,7 @@ class StoryController {
     static let sharedController =  StoryController()
     
     var stories = [Story]()
-   // Story = [Post]()
+    //var Story = [Post]()
     
     init() {
     
@@ -40,7 +40,6 @@ class StoryController {
         }
     }
     
-    
     func removeStory(story: Story) {
         if let indexOfStory = stories.indexOf(story) {
             stories.removeAtIndex(indexOfStory)
@@ -56,6 +55,9 @@ class StoryController {
     func addPostToStory(word: String, story: Story, completion: ((success: Bool) -> Void)?) {
         let post = Post(story: story, word: word)
         saveContext()
+        if let completion = completion {
+            completion(success: true)
+        }
     }
     
     func storyWithName(name: String) -> Story? {

@@ -13,11 +13,13 @@ class NewStoryViewController: UIViewController {
     
     @IBOutlet weak var bodyTextView: UITextView!
    
-    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var storyTitle: UITextField!
     
-    var story: Story?
+    //var posts: [Post] = []
     
-    var posts: [Post] = []
+    //var story: [Post] = []
+    
+    let story = Story(post: nil, title: "text")
     
     var word: String = ""
     
@@ -35,36 +37,26 @@ class NewStoryViewController: UIViewController {
     }
    
     @IBAction func addWordToStoryButtonTapped(sender: AnyObject) {
-        if let post = bodyTextView.text {
-            StoryController.sharedController.addPostToStory(word, story: , completion: { (success) in
-             })
-            self.dismissViewControllerAnimated(true, completion: nil)
-  
-        } else {
-            
+//        if let post = bodyTextView.text {
+//            StoryController.sharedController.addPostToStory(word, story: story, completion: { (success) in
+//             })
+//    } else {
             let alertController = UIAlertController(title: "Sorry buddy! You need to add a word first!", message: "Add a word!", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
             
             presentViewController(alertController, animated: true, completion: nil)
         }
-    }
-
     
+
     
     @IBAction func theEnd(sender: AnyObject) {
-        if let story = story {
-            story.title = titleTextField.text ?? ""
-            story.posts = bodyTextView.text ?? "" }
-        else {
-            let story = Story(post: bodyTextView.text ?? "", title: titleTextField.text ?? "", timestamp: NSDate())
-            StoryController.sharedController.addPostToStory(story)
-            
-            self.navigationController?.popToRootViewControllerAnimated(true)
-        }
-
+        StoryController.sharedController.saveContext()
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let navController = storyBoard.instantiateViewControllerWithIdentifier("navController")
+        self.presentViewController(navController, animated: true, completion: nil)
     }
 
-
+    
 
     /*
     // MARK: - Navigation
