@@ -20,7 +20,6 @@ class Story: SyncableObject, CloudKitManagedObject {
     static let kTitle = "title"
     static let kTimestamp = "timestamp"
     
-    
     convenience init(post: [Post], title: String, timestamp: NSDate = NSDate(), context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         
         guard let entity = NSEntityDescription.entityForName(Story.kType, inManagedObjectContext: context) else { fatalError() }

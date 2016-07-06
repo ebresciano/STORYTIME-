@@ -43,7 +43,7 @@ class SearchResultsTableViewController: UITableViewController, NSFetchedResultsC
         let result = resultsArray[indexPath.row] as? Story else {
                 return UITableViewCell()
         }
-        //cell.updateWithStory(result)
+        cell.updateWithStory(result)
         
         return cell
     }

@@ -16,6 +16,7 @@ class StoryController {
     static let sharedController =  StoryController()
     
     var stories = [Story]()
+   // Story = [Post]()
     
     init() {
     

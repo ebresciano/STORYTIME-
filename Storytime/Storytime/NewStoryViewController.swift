@@ -36,10 +36,10 @@ class NewStoryViewController: UIViewController {
    
     @IBAction func addWordToStoryButtonTapped(sender: AnyObject) {
         if let post = bodyTextView.text {
-            StoryController.sharedController.addPostToStory(word, completion: { (success) in
+            StoryController.sharedController.addPostToStory(word, story: , completion: { (success) in
              })
             self.dismissViewControllerAnimated(true, completion: nil)
-    
+  
         } else {
             
             let alertController = UIAlertController(title: "Sorry buddy! You need to add a word first!", message: "Add a word!", preferredStyle: .Alert)
@@ -52,17 +52,17 @@ class NewStoryViewController: UIViewController {
     
     
     @IBAction func theEnd(sender: AnyObject) {
-//        if let story = story {
-//            story.title = titleTextField.text ?? ""
-//            story.posts = bodyTextView.text ?? "" }
-//        else {
-//            let story = Story(post: bodyTextView.text ?? "", title: titleTextField.text ?? "", timestamp: NSDate())
-           // StoryController.sharedController.addPostToStory(story)
+        if let story = story {
+            story.title = titleTextField.text ?? ""
+            story.posts = bodyTextView.text ?? "" }
+        else {
+            let story = Story(post: bodyTextView.text ?? "", title: titleTextField.text ?? "", timestamp: NSDate())
+            StoryController.sharedController.addPostToStory(story)
             
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
 
-
+    }
 
 
 

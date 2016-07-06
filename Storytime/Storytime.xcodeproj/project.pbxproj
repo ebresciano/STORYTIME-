@@ -29,6 +29,9 @@
 		CCDA40A31D258AEC0078C8F3 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA409F1D258AEC0078C8F3 /* Story.swift */; };
 		CCDA40A51D25D3970078C8F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCDA40A41D25D3970078C8F3 /* Main.storyboard */; };
 		CCDA40A81D25DB950078C8F3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDA40A71D25DB950078C8F3 /* CloudKit.framework */; };
+		CCDA40AA1D2886480078C8F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA40A91D2886480078C8F3 /* User.swift */; };
+		CCDA40AC1D2C0F6D0078C8F3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA40AB1D2C0F6D0078C8F3 /* LoginViewController.swift */; };
+		CCDA40AE1D2C15FA0078C8F3 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA40AD1D2C15FA0078C8F3 /* UserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		CCDA40A41D25D3970078C8F3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Main.storyboard; sourceTree = "<group>"; };
 		CCDA40A61D25DB710078C8F3 /* Storytime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Storytime.entitlements; sourceTree = "<group>"; };
 		CCDA40A71D25DB950078C8F3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		CCDA40A91D2886480078C8F3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CCDA40AB1D2C0F6D0078C8F3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CCDA40AD1D2C15FA0078C8F3 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				CC0E3C5E1D24A0E40034D135 /* StoryController.swift */,
+				CCDA40AD1D2C15FA0078C8F3 /* UserController.swift */,
 			);
 			name = "MODEL CONTROLLER";
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 				CC7900031D21CA8100670517 /* StoryDetailViewController.swift */,
 				CC7900051D21CB1B00670517 /* SearchResultsTableViewController.swift */,
 				CC0E3C501D246BEE0034D135 /* StoryTableViewCell.swift */,
+				CCDA40AB1D2C0F6D0078C8F3 /* LoginViewController.swift */,
 			);
 			name = "VIEW CONTROLLERS";
 			sourceTree = "<group>";
@@ -117,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				CCDA409D1D258AEC0078C8F3 /* Post.swift */,
+				CCDA40A91D2886480078C8F3 /* User.swift */,
 				CCDA409F1D258AEC0078C8F3 /* Story.swift */,
 				CC0E3C4A1D24666E0034D135 /* Stack.swift */,
 				CC0E3C481D24641E0034D135 /* SearchableRecord.swift */,
@@ -244,6 +253,7 @@
 				CC0E3C5F1D24A0E40034D135 /* StoryController.swift in Sources */,
 				CC7900061D21CB1B00670517 /* SearchResultsTableViewController.swift in Sources */,
 				CC0E3C4B1D24666E0034D135 /* Stack.swift in Sources */,
+				CCDA40AC1D2C0F6D0078C8F3 /* LoginViewController.swift in Sources */,
 				CC0E3C461D245D3A0034D135 /* CoreDataModel.xcdatamodeld in Sources */,
 				CCDA40A01D258AEC0078C8F3 /* Post+CoreDataProperties.swift in Sources */,
 				CC0E3C581D249C660034D135 /* SyncableObject+CoreDataProperties.swift in Sources */,
@@ -253,7 +263,9 @@
 				CC79FFFE1D21C92A00670517 /* StoryListTableViewController.swift in Sources */,
 				CC0E3C4D1D2466C00034D135 /* CloudKitManager.swift in Sources */,
 				CC0E3C511D246BEE0034D135 /* StoryTableViewCell.swift in Sources */,
+				CCDA40AE1D2C15FA0078C8F3 /* UserController.swift in Sources */,
 				CCDA40A31D258AEC0078C8F3 /* Story.swift in Sources */,
+				CCDA40AA1D2886480078C8F3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
