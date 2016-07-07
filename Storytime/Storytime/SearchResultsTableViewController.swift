@@ -19,32 +19,28 @@ class SearchResultsTableViewController: UITableViewController, NSFetchedResultsC
     
     var users = [User]()
     
-     override func viewDidAppear(animated: Bool) {
-        users = UserController.sharedController.users
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         users = UserController.sharedController.users
-        print(resultsArray)
+        resultsArray = users
         setUpSearchController()
-        }
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(resultsArray.count)
         return resultsArray.count
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print(resultsArray)
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("resultsCell", forIndexPath: indexPath) as? StoryTableViewCell,
-        let result = resultsArray[indexPath.row] as? Story else {
-                return UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier("resultsCell", forIndexPath: indexPath)
+        if let user = resultsArray[indexPath.row] as? User {
+            
         }
-        cell.updateWithStory(result)
+//        cell.updateWithUser(result)
+//        cell.textLabel?.text = user.username
         
         return cell
     }
@@ -64,28 +60,26 @@ class SearchResultsTableViewController: UITableViewController, NSFetchedResultsC
         
         do {
             try fetchedResultsController?.performFetch()
-        } catch let error as NSError {
+        } catch let _ as NSError {
             print("Could not fetch results")
         }
         
         fetchedResultsController?.delegate = self
     }
     
-    
     func setUpSearchController() {
-        let resultsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SearchResultsTableViewController") as? SearchResultsTableViewController
-        searchController = UISearchController(searchResultsController: resultsController)
+//       let resultsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SearchResultsTableViewController") as? SearchResultsTableViewController
+        searchController = UISearchController(searchResultsController: nil)
         searchController?.searchResultsUpdater = self
+        searchController?.dimsBackgroundDuringPresentation = false
+        searchController?.definesPresentationContext = true
         tableView.tableHeaderView = searchController?.searchBar
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        if let searchResultsController = searchController.searchResultsController as? SearchResultsTableViewController,
-            let searchTerm = searchController.searchBar.text?.lowercaseString,
-            let users = users {
-        
-                searchResultsController.resultsArray = users.filter({$0.matchesSearchTerm(searchTerm)})
-                searchResultsController.tableView.reloadData()
+        if let searchTerm = searchController.searchBar.text?.lowercaseString {
+                resultsArray = users.filter({$0.matchesSearchTerm(searchTerm)})
+                tableView.reloadData()
             }
         }
     

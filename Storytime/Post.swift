@@ -15,7 +15,7 @@ class Post: SyncableObject, CloudKitManagedObject {
     
     static let kType = "Post"
     static let kWord = "word"
-    static let kStory = "story"
+    static let kStory = "Story"
     static let kTimestamp = "timestamp"
     
     convenience init(story: Story, word: String, timestamp: NSDate = NSDate(), context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext){
@@ -29,11 +29,6 @@ class Post: SyncableObject, CloudKitManagedObject {
         self.recordName = nameForManagedObject()
         
     }
-
-    func matchesSearchTerm(searchTerm: String) {
-        return (user).filter({$0.matchesSearchTerm(searchTerm)}).count > 0
-    }
-
     
     var recordType: String = Post.kType
     

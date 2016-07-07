@@ -58,23 +58,23 @@ class LoginViewController: UIViewController {
     
     func checkForAccount() {
         if account == .existing {
-            if let username = usernameTextField.text where username.characters.count > 0, let password = passwordTextField.text where password.characters.count > 0 {
-                if let user = UserController.sharedController.currentUser {
-                 print(user)
+            let allUsers = UserController.sharedController.users
+            for user in allUsers {
+                if user.username == usernameTextField.text && user.password == passwordTextField.text {
+                    UserController.sharedController.currentUser = user
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    let navController = storyBoard.instantiateViewControllerWithIdentifier("navController")
+                    self.presentViewController(navController, animated: true, completion: nil)
                 }
             }
         } else {
             if account == .new {
                 if let username = usernameTextField.text where username.characters.count > 0, let password = passwordTextField.text where password.characters.count > 0 {
                     UserController.sharedController.createUser(username, password: password)
-                    StoryController.sharedController.saveContext()
-                                        }
+//                    StoryController.sharedController.saveContext()
                 }
             }
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let navController = storyBoard.instantiateViewControllerWithIdentifier("navController")
-        self.presentViewController(navController, animated: true, completion: nil)
-
         }
     }
+}
 

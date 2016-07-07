@@ -12,6 +12,10 @@ class StoryDetailViewController: UIViewController {
     
     var story: Story?
 
+    @IBOutlet weak var storyTitle: UILabel!
+    
+    @IBOutlet weak var storyBodyText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
