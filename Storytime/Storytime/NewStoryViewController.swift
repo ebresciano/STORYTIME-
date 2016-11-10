@@ -37,16 +37,16 @@ class NewStoryViewController: UIViewController {
     }
    
     @IBAction func addWordToStoryButtonTapped(sender: AnyObject) {
-        if let post = bodyTextView.text {
-            StoryController.sharedController.addPostToStory(word, story: story, completion: { (success) in
-             })
-    } else {
+//        if let post = bodyTextView.text {
+//            StoryController.sharedController.addPostToStory(word, story: story, completion: { (success) in
+//             })
+//    } else {
             let alertController = UIAlertController(title: "Sorry buddy! You need to add a word first!", message: "Add a word!", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
             
             presentViewController(alertController, animated: true, completion: nil)
         }
-    }
+   // }
 
     
     @IBAction func theEnd(sender: AnyObject) {

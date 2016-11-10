@@ -6,14 +6,6 @@
 //  Copyright © 2016 Eva Bresciano. All rights reserved.
 //
 
-//  CloudKitManager.swift
-//  Timeline 2
-//
-//  Created by Eva Marie Bresciano on 6/15/16.
-//  Copyright © 2016 Eva Bresciano. All rights reserved.
-//
-
-
 import CloudKit
 import UIKit
 

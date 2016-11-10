@@ -71,7 +71,7 @@ class LoginViewController: UIViewController {
             if account == .new {
                 if let username = usernameTextField.text where username.characters.count > 0, let password = passwordTextField.text where password.characters.count > 0 {
                     UserController.sharedController.createUser(username, password: password)
-//                    StoryController.sharedController.saveContext()
+                   StoryController.sharedController.saveContext()
                 }
             }
         }

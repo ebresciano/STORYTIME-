@@ -34,8 +34,6 @@ class UserController {
     private let userDataKey = "userData"
     
     init() {
-//        let userDictionary = NSUserDefaults.standardUserDefaults().objectForKey(userDataKey) as? [String: AnyObject] ?? [:]
-//        currentUser = User(dictionary: userDictionary)
         
         guard let _ = NSUserDefaults.standardUserDefaults().arrayForKey(allUsersKey) as? [[String: AnyObject]] else {
             NSUserDefaults.standardUserDefaults().setObject(nil, forKey: allUsersKey)
